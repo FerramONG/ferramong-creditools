@@ -1,14 +1,14 @@
-DROP TABLE IF EXISTS Scheduler;
+DROP TABLE IF EXISTS Creditools;
 
-CREATE TABLE Scheduler (
-          id INT AUTO_INCREMENT  PRIMARY KEY,
-          name VARCHAR(250) NOT NULL
+CREATE TABLE Creditools (
+        id_dweller INT AUTO_INCREMENT  PRIMARY KEY,
+        balance DOUBLE NOT NULL
 );
 
-INSERT INTO Scheduler (name) VALUES
-('FULANO DA SILVA'),
-('FULANO DA COSTA'),
-('FULANO DA SILVA COSTA'),
-('BELTRANO'),
-('BELTRANO FULANO DA SILVA'),
-('SICRANO');
+INSERT INTO Creditools (id_dweller, balance) VALUES
+(1, 10.0),
+(2, 100.0),
+(3, 4.32),
+(4, 7.0),
+(5, 1234.56),
+(6, 78.90);

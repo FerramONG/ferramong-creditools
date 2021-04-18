@@ -1,5 +1,6 @@
 package ferramong.creditools.controllers;
 
+import ferramong.creditools.models.TransactionInfo;
 import ferramong.creditools.services.CreditoolsService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -17,21 +18,27 @@ public class CreditoolsController {
     private final CreditoolsService creditoolsService;
 
     @PutMapping("/wallet/credit/money")
-    public void creditUsingMoney(@RequestAttribute("id_dweller") int idDweller,
-                                 @RequestAttribute("value") double value) {
-        creditoolsService.creditUsingMoney(idDweller, value);
+    public void creditUsingMoney(@RequestBody TransactionInfo transaction) {
+        creditoolsService.creditUsingMoney(
+                transaction.getIdDweller(),
+                transaction.getValue()
+        );
     }
 
     @PutMapping("/wallet/credit/creditools")
-    public void creditUsingCreditools(@RequestAttribute("id_dweller") int idDweller,
-                                      @RequestAttribute("value") double value) {
-        creditoolsService.creditUsingCreditools(idDweller, value);
+    public void creditUsingCreditools(@RequestBody TransactionInfo transaction) {
+        creditoolsService.creditUsingCreditools(
+                transaction.getIdDweller(),
+                transaction.getValue()
+        );
     }
 
     @PutMapping("/wallet/debit")
-    public void debit(@RequestAttribute("id_dweller") int idDweller,
-                      @RequestAttribute("value") double value) {
-         creditoolsService.debit(idDweller, value);
+    public void debit(@RequestBody TransactionInfo transaction) {
+         creditoolsService.debit(
+                 transaction.getIdDweller(),
+                 transaction.getValue()
+         );
     }
 
     @GetMapping("/wallet/dweller/{id_dweller}")

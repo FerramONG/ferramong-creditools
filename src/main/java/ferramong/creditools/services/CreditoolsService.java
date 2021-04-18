@@ -13,10 +13,7 @@ public class CreditoolsService {
     private final CreditoolsRepository repository;
 
     public void creditUsingMoney(int idDweller, double value) {
-        if (!repository.existsById(idDweller))
-            throw new NotFoundException();
-
-        repository.creditDweller(idDweller, value);
+        creditUsingCreditools(idDweller, value * 10);
     }
 
     public void creditUsingCreditools(int idDweller, double value) {
