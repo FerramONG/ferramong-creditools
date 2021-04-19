@@ -1,5 +1,6 @@
 package ferramong.creditools.services;
 
+import ferramong.creditools.entities.Creditools;
 import ferramong.creditools.repositories.CreditoolsRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -11,6 +12,10 @@ import javax.ws.rs.NotFoundException;
 public class CreditoolsService {
 
     private final CreditoolsRepository repository;
+
+    public void newWallet(int idDweller) {
+        repository.save(new Creditools(idDweller));
+    }
 
     public void creditUsingMoney(int idDweller, double value) {
         creditUsingCreditools(idDweller, value * 10);

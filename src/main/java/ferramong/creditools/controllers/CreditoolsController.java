@@ -18,6 +18,26 @@ public class CreditoolsController {
     private final CreditoolsService creditoolsService;
 
     /**
+     * Creates a wallet for a dweller.
+     *
+     * <h2>CURL example</h2>
+     * <code>
+     *     curl "https://ferramong-creditools.herokuapp.com/wallet" \
+     *     -X POST \
+     *     -d "{\n  \"idDweller\": \"1\"\n}" \
+     *     -H "Content-type: application/json"
+     * </code>
+     *
+     * @param       idDweller Dweller id
+     *
+     * @return      200 if ok; 400 if another error occurs
+     */
+    @PostMapping("/wallet")
+    public void newWallet(@RequestAttribute("idDweller") int idDweller) {
+        creditoolsService.newWallet(idDweller);
+    }
+
+    /**
      * Credits some cash value to a dweller's account.
      * (1 money unit <=> 10 creditools)
      *
