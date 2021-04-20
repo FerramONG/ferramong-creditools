@@ -28,13 +28,13 @@ public class CreditoolsController {
      *     -H "Content-type: application/json"
      * </code>
      *
-     * @param       idDweller Dweller id
+     * @param       request idDweller: Dweller id
      *
      * @return      200 if ok; 400 if another error occurs
      */
     @PostMapping("/wallet")
-    public void newWallet(@RequestAttribute("idDweller") int idDweller) {
-        creditoolsService.newWallet(idDweller);
+    public void newWallet(@RequestBody Map<String, Integer> request) {
+        creditoolsService.newWallet(request.get("idDweller"));
     }
 
     /**
