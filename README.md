@@ -9,7 +9,7 @@
 	<a href="https://github.com/FerramONG/ferramong-creditools/actions/workflows/macos.yml"><img src="https://github.com/FerramONG/ferramong-creditools/actions/workflows/macos.yml/badge.svg" alt=""></a>
 	<a href="https://github.com/FerramONG/ferramong-creditools/actions/workflows/ubuntu.yml"><img src="https://github.com/FerramONG/ferramong-creditools/actions/workflows/ubuntu.yml/badge.svg" alt=""></a>
   <a href="http://java.oracle.com"><img src="https://img.shields.io/badge/java-12+-D0008F.svg" alt="Java compatibility"></a>
-  <a href="https://github.com/FerramONG/ferramong-creditools/blob/master/LICENCE"><img src="https://img.shields.io/badge/Licence-BSD0-919191.svg" alt="Licence"></a>
+  <a href="https://github.com/FerramONG/ferramong-creditools/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-BSD0-919191.svg" alt="License"></a>
 	<a href="https://github.com/FerramONG/ferramong-creditools/releases"><img src="https://img.shields.io/github/v/release/FerramONG/ferramong-creditools" alt="Release"></a>
 </p>
 <hr />
